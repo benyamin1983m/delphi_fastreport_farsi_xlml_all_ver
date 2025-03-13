@@ -1,0 +1,13 @@
+procedure fr_locale(masir: string = '');
+begin
+
+  if masir = '' then
+    masir := 'c:\farsi\';
+
+  frxResources.LoadFromFile(masir + 'frxrcClass.xml');
+  frxResources.LoadFromFile(masir +  'frxrcDesgn.xml');
+  frxResources.LoadFromFile(masir +  'frxrcExports.xml');
+  frxResources.LoadFromFile(masir +  'frxrcInsp.xml');
+end;
+
+// run before disign or preview component
